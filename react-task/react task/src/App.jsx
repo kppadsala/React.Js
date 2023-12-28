@@ -15,12 +15,22 @@ function App() {
 
   return (
     <div>
+      {/* 2.===Componet==== */}
       {/* <FunctionCom /> */}
       {/* <ClassCom /> */}
-      <Header />
-      <Body />
+      {/* 2.===Componet ==== */}
+
+      {/* 3.=======Styling Css====== */}
+      {/* <Body />
       <Footer />
       <SectionPart/>
+      <Header /> */}
+      {/* 3.=======Styling Css End====== */}
+
+      {/* ==========TASK======= */}
+      
+      {/* ==========TASK  END======= */}
+
     </div>
   )
 }
