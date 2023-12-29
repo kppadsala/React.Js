@@ -2,13 +2,17 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import FunctionCom from './2.componet/functionaol'
-import ClassCom from './2.componet/class'
-import Header from './3.styling css/header'
-import Body from './3.styling css/body'
-import Footer from './3.styling css/footer'
-import Section from './3.styling css/section'
-import SectionPart from './3.styling css/section'
+// import FunctionCom from './2.componet/functionaol'
+// import ClassCom from './2.componet/class'
+// import Header from './3.styling css/header'
+// import Body from './3.styling css/body'
+// import Footer from './3.styling css/footer'
+// import Section from './3.styling css/section'
+// import SectionPart from './3.styling css/section'
+import CardPart from './task/card'
+import ClassProps from './4.props/Class/ClassProps'
+import FunctionProps from './4.props/Function/FunctionProps'
+
 
 function App() {
   
@@ -28,9 +32,14 @@ function App() {
       {/* 3.=======Styling Css End====== */}
 
       {/* ==========TASK======= */}
-      
+      {/* <div className='d-flex'>
+      <CardPart />
+      <CardPart />
+      <CardPart/></div> */}
       {/* ==========TASK  END======= */}
 
+      <FunctionProps />
+      <ClassProps/>
     </div>
   )
 }
