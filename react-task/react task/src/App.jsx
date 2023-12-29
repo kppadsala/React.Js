@@ -9,9 +9,15 @@ import './App.css'
 // import Footer from './3.styling css/footer'
 // import Section from './3.styling css/section'
 // import SectionPart from './3.styling css/section'
-import CardPart from './task/card'
-import ClassProps from './4.props/Class/ClassProps'
-import FunctionProps from './4.props/Function/FunctionProps'
+// import CardPart from './task/card'
+import Header from './task/Header'
+import Footer from './task/Footer'
+import Bodycard from './task/Bodycard'
+import Headerprop from './task/headerprop'
+import BodyCardPorps from './task/BodyCardPorps'
+import Footerprop from './task/Footerprop'
+// import ClassProps from './4.props/Class/ClassProps'
+// import FunctionProps from './4.props/Function/FunctionProps'
 
 
 function App() {
@@ -32,14 +38,22 @@ function App() {
       {/* 3.=======Styling Css End====== */}
 
       {/* ==========TASK======= */}
-      {/* <div className='d-flex'>
+      {/* <div className='d-flex justify-content-evenly' >
       <CardPart />
       <CardPart />
       <CardPart/></div> */}
-      {/* ==========TASK  END======= */}
 
-      <FunctionProps />
-      <ClassProps/>
+      <Headerprop/>
+      <BodyCardPorps/>
+      <Footerprop/>
+      {/* ==========TASK  END======= */}
+      {/* ===========PROPS======== */}
+      {/* <FunctionProps /> */}
+      {/* <hr className='bg-danger p-3'/> */}
+        {/* <ClassProps /> */}
+      {/* ===========PROPS END======== */}
+
+      
     </div>
   )
 }

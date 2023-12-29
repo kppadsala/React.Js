@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function functional(props) {
+export default function Functional(props) {
   return (
-      <div>Functional
-          <h1>my name is{props.name}{ props.age}</h1>
+      <div>
+          <h1>my name is{props?.name} my age is { props?.age || "not mention"}</h1>
     </div>
   )
 }
