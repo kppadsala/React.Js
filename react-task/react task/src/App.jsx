@@ -2,6 +2,8 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import FunctionState from './6.State/FunctionState';
+// import MapandKeys from './5.MapandKey/MapandKeys'
 // import FunctionCom from './2.componet/functionaol'
 // import ClassCom from './2.componet/class'
 // import Header from './3.styling css/header'
@@ -13,11 +15,13 @@ import './App.css'
 // import Header from './task/Header'
 // import Footer from './task/Footer'
 // import Bodycard from './task/Bodycard'
-import Headerprop from './task/headerprop'
-import BodyCardPorps from './task/BodyCardPorps'
-import Footerprop from './task/Footerprop'
+// import Headerprop from './task/headerprop'
+// import BodyCardPorps from './task/BodyCardPorps'
+// import Footerprop from './task/Footerprop'
+import Cardprops from './task/project1/cardprops'
 // import ClassProps from './4.props/Class/ClassProps'
 // import FunctionProps from './4.props/Function/FunctionProps'
+
 
 
 function App() {
@@ -43,19 +47,24 @@ function App() {
       <CardPart />
       <CardPart/></div> */}
 
-      <Headerprop/>
+      {/* <Headerprop/>
       <BodyCardPorps/>
-      <Footerprop/>
+      <Footerprop/> */}
+      <Cardprops/>
+      {/* <MapandKeys/> */}
       {/* ==========TASK  END======= */}
+
       {/* ===========PROPS======== */}
       {/* <FunctionProps /> */}
       {/* <hr className='bg-danger p-3'/> */}
-        {/* <ClassProps /> */}
+      {/* <ClassProps /> */}
       {/* ===========PROPS END======== */}
 
-      
+      {/* ============functionState============ */}
+      {/* <FunctionState/> */}
+      {/* ============functionState End============ */}
     </div>
-  )
+  );
 }
 
 export default App
