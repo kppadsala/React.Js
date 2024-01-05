@@ -9,7 +9,12 @@ export default function StateTask() {
         setIndex(index + 1);
         if (index == color.length - 1) {
             let value = confirm("You can repeat This Array")
-            value ?  setIndex(0) : setIndex(index + 1)
+            if (value == true) {
+                setIndex(0);
+            }
+            else {
+                setIndex(index + 1);
+            }
         }
         
     }
