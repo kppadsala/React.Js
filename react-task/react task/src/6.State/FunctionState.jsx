@@ -17,7 +17,8 @@ export default function FunctionState() {
     return (
       <div>
         <h1>x is Decrease  {decre}</h1>
-        <Button onClick={innX} color="danger">
+        <Button color='danger'
+          onClick={innX} >
           Inc X
         </Button>
         <hr />

@@ -2,7 +2,10 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import FunctionState from './6.State/FunctionState';
+import StateTask from './6.State/StateTask';
+// import ClassState from './6.State/ClassState';
+// import StateProject from './6.State/StateProject';
+// import FunctionState from './6.State/FunctionState';
 // import MapandKeys from './5.MapandKey/MapandKeys'
 // import FunctionCom from './2.componet/functionaol'
 // import ClassCom from './2.componet/class'
@@ -18,7 +21,7 @@ import FunctionState from './6.State/FunctionState';
 // import Headerprop from './task/headerprop'
 // import BodyCardPorps from './task/BodyCardPorps'
 // import Footerprop from './task/Footerprop'
-import Cardprops from './task/project1/cardprops'
+// import Cardprops from './task/project1/cardprops'
 // import ClassProps from './4.props/Class/ClassProps'
 // import FunctionProps from './4.props/Function/FunctionProps'
 
@@ -33,36 +36,35 @@ function App() {
       {/* <FunctionCom /> */}
       {/* <ClassCom /> */}
       {/* 2.===Componet ==== */}
-
       {/* 3.=======Styling Css====== */}
       {/* <Body />
       <Footer />
       <SectionPart/>
       <Header /> */}
       {/* 3.=======Styling Css End====== */}
-
       {/* ==========TASK======= */}
       {/* <div className='d-flex justify-content-evenly' >
       <CardPart />
       <CardPart />
       <CardPart/></div> */}
-
       {/* <Headerprop/>
       <BodyCardPorps/>
       <Footerprop/> */}
-      <Cardprops/>
+      {/* <Cardprops/> */}
       {/* <MapandKeys/> */}
       {/* ==========TASK  END======= */}
-
+      {/*  */}
       {/* ===========PROPS======== */}
       {/* <FunctionProps /> */}
       {/* <hr className='bg-danger p-3'/> */}
       {/* <ClassProps /> */}
       {/* ===========PROPS END======== */}
-
-      {/* ============functionState============ */}
+      {/* ============State============ */}
       {/* <FunctionState/> */}
-      {/* ============functionState End============ */}
+      {/* <ClassState/> */}
+      {/* <StateProject/> */}
+      <StateTask/>
+      {/* ============State End============ */}
     </div>
   );
 }
