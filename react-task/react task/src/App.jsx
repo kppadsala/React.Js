@@ -2,13 +2,17 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import StateTask from './6.State/StateTask';
+// import StateTask from './6.State/StateTask';
+// import ConRendring from './7.ConditionRendering/ConRendring';
+// import ConRenTask from './7.ConditionRendering/ConRenTask';
+import ComponetRenderingTask from './7.ConditionRendering/ComponetRenderingTask';
+// import FunctionCom from './2.componet/function/FunctionCom';
+// import ClassCom from './2.componet/class/ClassCom';
 // import ClassState from './6.State/ClassState';
 // import StateProject from './6.State/StateProject';
 // import FunctionState from './6.State/FunctionState';
 // import MapandKeys from './5.MapandKey/MapandKeys'
-// import FunctionCom from './2.componet/functionaol'
-// import ClassCom from './2.componet/class'
+
 // import Header from './3.styling css/header'
 // import Body from './3.styling css/body'
 // import Footer from './3.styling css/footer'
@@ -63,8 +67,13 @@ function App() {
       {/* <FunctionState/> */}
       {/* <ClassState/> */}
       {/* <StateProject/> */}
-      <StateTask/>
+      {/* <StateTask /> */}
       {/* ============State End============ */}
+      {/* ============Condition Rendering================= */}
+      {/* <ConRendring /> */}
+      {/* <ConRenTask/> */}
+      <ComponetRenderingTask/>
+      {/* ============Condition Rendering================= */}
     </div>
   );
 }
