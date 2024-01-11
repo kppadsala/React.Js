@@ -1,5 +1,9 @@
 import React from 'react'
 import logo from "../../../public/logo.png";
+import { FaInstagramSquare } from "react-icons/fa";
+import { FaSquareGithub } from "react-icons/fa6";
+import { FaWhatsappSquare } from "react-icons/fa";
+import { FaFacebookSquare } from "react-icons/fa";
 
 export default function Footers() {
   return (
@@ -14,8 +18,21 @@ export default function Footers() {
             We are a team of professional, energetic individuals with talented
             designers .
           </p>
-          <div className="social">
-            <i class="bi bi-instagram"></i>
+          <div className="social d-flex gap-2">
+            <h3>
+              
+              <FaInstagramSquare />
+            </h3>
+            <h3>
+              <FaSquareGithub />
+            </h3>
+            <h3>
+              
+              <FaWhatsappSquare />
+            </h3>
+            <h3>
+              <FaFacebookSquare />
+            </h3>
           </div>
         </div>
         <div className="section_2 col-2 ">

@@ -1,0 +1,122 @@
+[
+  {
+    "city": "Delhi",
+    "state_name": "Delhi",
+    "population": "32226001"
+  },
+  {
+    "city": "Mumbai",
+    "state_name": "Mahārāshtra",
+    "population": "24973000"
+  },
+  {
+    "city": "Kolkāta",
+    "state_name": "West Bengal",
+    "population": "18502000"
+  },
+  {
+    "city": "Bangalore",
+    "state_name": "Karnātaka",
+    "population": "15386000"
+  },
+  {
+    "city": "Chennai",
+    "state_name": "Tamil Nādu",
+    "population": "12395000"
+  },
+  {
+    "city": "Hyderābād",
+    "state_name": "Telangāna",
+    "population": "10494000"
+  },
+  {
+    "city": "Pune",
+    "state_name": "Mahārāshtra",
+    "population": "8231000"
+  },
+  {
+    "city": "Ahmedabad",
+    "state_name": "Gujarāt",
+    "population": "8009000"
+  },
+  {
+    "city": "Sūrat",
+    "state_name": "Gujarāt",
+    "population": "6538000"
+  },
+  {
+    "city": "Prayagraj",
+    "state_name": "Uttar Pradesh",
+    "population": "5954391"
+  },
+  {
+    "city": "Lucknow",
+    "state_name": "Uttar Pradesh",
+    "population": "3382000"
+  },
+  {
+    "city": "Puducherry",
+    "state_name": "Puducherry",
+    "population": "244377"
+  },
+  {
+    "city": "Byatarayanpur",
+    "state_name": "Karnātaka",
+    "population": "239902"
+  },
+  {
+    "city": "Pallāvaram",
+    "state_name": "Tamil Nādu",
+    "population": "215417"
+  },
+  {
+    "city": "Secunderābād",
+    "state_name": "Andhra Pradesh",
+    "population": "213698"
+  },
+  {
+    "city": "Shimla",
+    "state_name": "Himāchal Pradesh",
+    "population": "206575"
+  },
+   {
+    "city": "Dam Dam",
+    "state_name": "West Bengal",
+    "population": "114786"
+  },
+  {
+    "city": "Bānsbāria",
+    "state_name": "West Bengal",
+    "population": "103920"
+  },
+  {
+    "city": "Madhavaram",
+    "state_name": "Tamil Nādu",
+    "population": "100442"
+  },
+  {
+    "city": "Baj Baj",
+    "state_name": "West Bengal",
+    "population": "76837"
+  },
+  {
+    "city": "Nerkunram",
+    "state_name": "Tamil Nādu",
+    "population": "52570"
+  },
+  {
+    "city": "Kendrāparha",
+    "state_name": "Odisha",
+    "population": "41404"
+  },
+  {
+    "city": "Sijua",
+    "state_name": "Jhārkhand",
+    "population": "39372"
+  },
+  {
+    "city": "Manali",
+    "state_name": "Tamil Nādu",
+    "population": "37748"
+  }
+]
