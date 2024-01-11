@@ -10,7 +10,7 @@ export default function ConRenTask() {
           style={{
             width: "150px",
             height: "150px",
-            backgroundColor: color?'blue':'pink',
+            backgroundColor: color ? 'blue':'pink',
             margin: "15px",
           }}
         ></div>

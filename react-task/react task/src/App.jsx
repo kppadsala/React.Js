@@ -2,10 +2,14 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+
+
+
 // import StateTask from './6.State/StateTask';
 // import ConRendring from './7.ConditionRendering/ConRendring';
 // import ConRenTask from './7.ConditionRendering/ConRenTask';
-import ComponetRenderingTask from './7.ConditionRendering/ComponetRenderingTask';
+import Home from './task/Project_2/Home';
+// import ComponetRenderingTask from './7.ConditionRendering/ComponetRenderingTask';
 // import FunctionCom from './2.componet/function/FunctionCom';
 // import ClassCom from './2.componet/class/ClassCom';
 // import ClassState from './6.State/ClassState';
@@ -40,12 +44,16 @@ function App() {
       {/* <FunctionCom /> */}
       {/* <ClassCom /> */}
       {/* 2.===Componet ==== */}
+
+
       {/* 3.=======Styling Css====== */}
       {/* <Body />
       <Footer />
       <SectionPart/>
       <Header /> */}
       {/* 3.=======Styling Css End====== */}
+
+      
       {/* ==========TASK======= */}
       {/* <div className='d-flex justify-content-evenly' >
       <CardPart />
@@ -56,23 +64,31 @@ function App() {
       <Footerprop/> */}
       {/* <Cardprops/> */}
       {/* <MapandKeys/> */}
+      <Home/>
       {/* ==========TASK  END======= */}
-      {/*  */}
+      
+
       {/* ===========PROPS======== */}
       {/* <FunctionProps /> */}
       {/* <hr className='bg-danger p-3'/> */}
       {/* <ClassProps /> */}
       {/* ===========PROPS END======== */}
+
+
+
       {/* ============State============ */}
       {/* <FunctionState/> */}
       {/* <ClassState/> */}
       {/* <StateProject/> */}
       {/* <StateTask /> */}
       {/* ============State End============ */}
+
+
+
       {/* ============Condition Rendering================= */}
       {/* <ConRendring /> */}
       {/* <ConRenTask/> */}
-      <ComponetRenderingTask/>
+      {/* <ComponetRenderingTask/> */}
       {/* ============Condition Rendering================= */}
     </div>
   );
