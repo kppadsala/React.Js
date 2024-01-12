@@ -1,13 +1,15 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
+// import Count from './8.LifeCycle/Count';
+import Login from './8.LifeCycle/Login';
 
 
 
 // import StateTask from './6.State/StateTask';
 // import ConRendring from './7.ConditionRendering/ConRendring';
 // import ConRenTask from './7.ConditionRendering/ConRenTask';
-import Home from './task/Project_2/Home';
+// import Home from './task/Project_2/Home';
 // import ComponetRenderingTask from './7.ConditionRendering/ComponetRenderingTask';
 // import FunctionCom from './2.componet/function/FunctionCom';
 // import ClassCom from './2.componet/class/ClassCom';
@@ -63,7 +65,7 @@ function App() {
       <Footerprop/> */}
       {/* <Cardprops/> */}
       {/* <MapandKeys/> */}
-      <Home/>
+      {/* <Home/> */}
       {/* ==========TASK  END======= */}
       
 
@@ -89,6 +91,11 @@ function App() {
       {/* <ConRenTask/> */}
       {/* <ComponetRenderingTask/> */}
       {/* ============Condition Rendering================= */}
+
+      {/* ==================LIFE CYCLE========= */}
+      {/* <Count/> */}
+      <Login/>
+      {/* ==============LIFE CYCLE END============ */}
     </div>
   );
 }
