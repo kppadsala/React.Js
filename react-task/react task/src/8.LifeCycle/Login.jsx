@@ -19,7 +19,7 @@ export default class Login extends Component {
         this.setState({ id: id });
         
         let lid = setInterval(() => {
-          alert(" ********?LOGIN?****** ");
+          alert("Create a New Account");
         }, 5000);
       this.setState({ lid: lid });
         

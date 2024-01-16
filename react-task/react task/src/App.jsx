@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
+
+
+
+
+import Counter from './task/Project3/Counter';
 // import Count from './8.LifeCycle/Count';
-import Login from './8.LifeCycle/Login';
-
-
-
+// import Login from './8.LifeCycle/Login';
 // import StateTask from './6.State/StateTask';
 // import ConRendring from './7.ConditionRendering/ConRendring';
 // import ConRenTask from './7.ConditionRendering/ConRenTask';
@@ -46,7 +48,6 @@ function App() {
       {/* <ClassCom /> */}
       {/* 2.===Componet ==== */}
 
-
       {/* 3.=======Styling Css====== */}
       {/* <Body />
       <Footer />
@@ -54,7 +55,30 @@ function App() {
       <Header /> */}
       {/* 3.=======Styling Css End====== */}
 
-      
+      {/* ===========PROPS======== */}
+      {/* <FunctionProps /> */}
+      {/* <hr className='bg-danger p-3'/> */}
+      {/* <ClassProps /> */}
+      {/* ===========PROPS END======== */}
+
+      {/* ============State============ */}
+      {/* <FunctionState/> */}
+      {/* <ClassState/> */}
+      {/* <StateProject/> */}
+      {/* <StateTask /> */}
+      {/* ============State End============ */}
+
+      {/* ============Condition Rendering================= */}
+      {/* <ConRendring /> */}
+      {/* <ConRenTask/> */}
+      {/* <ComponetRenderingTask/> */}
+      {/* ============Condition Rendering================= */}
+
+      {/* ==================LIFE CYCLE========= */}
+      {/* <Count/> */}
+      {/* <Login/> */}
+      {/* ==============LIFE CYCLE END============ */}
+
       {/* ==========TASK======= */}
       {/* <div className='d-flex justify-content-evenly' >
       <CardPart />
@@ -66,36 +90,11 @@ function App() {
       {/* <Cardprops/> */}
       {/* <MapandKeys/> */}
       {/* <Home/> */}
+      {/* ****************Project3*************** */}
+      <Counter/>
+      {/* ****************END Project3*************** */}
+
       {/* ==========TASK  END======= */}
-      
-
-      {/* ===========PROPS======== */}
-      {/* <FunctionProps /> */}
-      {/* <hr className='bg-danger p-3'/> */}
-      {/* <ClassProps /> */}
-      {/* ===========PROPS END======== */}
-
-
-
-      {/* ============State============ */}
-      {/* <FunctionState/> */}
-      {/* <ClassState/> */}
-      {/* <StateProject/> */}
-      {/* <StateTask /> */}
-      {/* ============State End============ */}
-
-
-
-      {/* ============Condition Rendering================= */}
-      {/* <ConRendring /> */}
-      {/* <ConRenTask/> */}
-      {/* <ComponetRenderingTask/> */}
-      {/* ============Condition Rendering================= */}
-
-      {/* ==================LIFE CYCLE========= */}
-      {/* <Count/> */}
-      <Login/>
-      {/* ==============LIFE CYCLE END============ */}
     </div>
   );
 }
