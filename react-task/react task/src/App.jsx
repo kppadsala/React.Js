@@ -1,11 +1,17 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
+// import Userefinput from './10.Input/Userefinput';
+// import Offcanvas from './Offcanvas/Offcanvas';
+// import UseEffect from './9.Hooks/UseEffect';
+// import InputCom from './10.Input/InputCom';
+import DeleteCom from './11.Delete/DeleteCom';
+// import Productinput from './10.Input/Productinput';
 
 
 
 
-import Counter from './task/Project3/Counter';
+// import Counter from './task/Project3/Counter';
 // import Count from './8.LifeCycle/Count';
 // import Login from './8.LifeCycle/Login';
 // import StateTask from './6.State/StateTask';
@@ -47,38 +53,40 @@ function App() {
       {/* <FunctionCom /> */}
       {/* <ClassCom /> */}
       {/* 2.===Componet ==== */}
-
       {/* 3.=======Styling Css====== */}
       {/* <Body />
       <Footer />
       <SectionPart/>
       <Header /> */}
       {/* 3.=======Styling Css End====== */}
-
       {/* ===========PROPS======== */}
       {/* <FunctionProps /> */}
       {/* <hr className='bg-danger p-3'/> */}
       {/* <ClassProps /> */}
       {/* ===========PROPS END======== */}
-
       {/* ============State============ */}
       {/* <FunctionState/> */}
       {/* <ClassState/> */}
       {/* <StateProject/> */}
       {/* <StateTask /> */}
       {/* ============State End============ */}
-
       {/* ============Condition Rendering================= */}
       {/* <ConRendring /> */}
       {/* <ConRenTask/> */}
       {/* <ComponetRenderingTask/> */}
       {/* ============Condition Rendering================= */}
-
       {/* ==================LIFE CYCLE========= */}
       {/* <Count/> */}
-      {/* <Login/> */}
+      {/* <Login /> */}
       {/* ==============LIFE CYCLE END============ */}
-
+      {/* =========HOOKS============ */}
+      {/* <UseEffect/> */}
+      {/* =========END HOOKS============ */}
+      {/* <InputCom /> */}
+      {/* <Productinput/> */}
+      {/* <Userefinput/> */}
+      {/* ===========Delete===== */}
+      <DeleteCom/>
       {/* ==========TASK======= */}
       {/* <div className='d-flex justify-content-evenly' >
       <CardPart />
@@ -91,10 +99,10 @@ function App() {
       {/* <MapandKeys/> */}
       {/* <Home/> */}
       {/* ****************Project3*************** */}
-      <Counter/>
+      {/* <Counter/> */}
       {/* ****************END Project3*************** */}
-
       {/* ==========TASK  END======= */}
+      {/* <Offcanvas/> */}
     </div>
   );
 }
