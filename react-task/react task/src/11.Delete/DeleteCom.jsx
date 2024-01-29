@@ -7,14 +7,15 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 export default function DeleteCom() {
   const [data, setData] = useState("");
   const [task, setTask] = useState([]);
+  const [similardata,setsimilardata]=useState("")
 
   const getData = (ele) => {
-    if (ele.target.value !== getData) {
+    if (ele.target.value !== similardata) {
       setData(ele.target.value);
     } else {
       alert("update Your data");
     }
-    console.log("--->",ele.target.value);
+    
   };
   
 
@@ -22,6 +23,7 @@ export default function DeleteCom() {
     if (data !== "" ) {
       setTask([...task, data]);
       setData("");
+      setsimilardata(data)
     } else {
       alert("Please Fill This Info")
     }
@@ -60,7 +62,8 @@ export default function DeleteCom() {
             <FaPlus />
           </Button>
         </div>
-        <div className="text-black mt-4">
+        <div className="text-black mt-4 border border-bottom-2 border-danger p-3 listbox">
+          <h5 className="text-black-50" >Data Is Not Found</h5>
           {task.map((e, i) => (
             <li
               className="list-unstyled border border-bottom-2 border-danger w-100 text-center mt-1 p-2 d-flex justify-content-between align-items-center"
