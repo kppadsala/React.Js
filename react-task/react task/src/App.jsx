@@ -1,11 +1,14 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
+// import CrudCom from './task/CRUD/CrudCom';
+import ComCrud from './task/CRUD/ComCrud';
 // import Userefinput from './10.Input/Userefinput';
 // import Offcanvas from './Offcanvas/Offcanvas';
 // import UseEffect from './9.Hooks/UseEffect';
 // import InputCom from './10.Input/InputCom';
-import DeleteCom from './11.Delete/DeleteCom';
+// import DeleteCom from './11.Delete/DeleteCom';
+// import Crud from './task/CRUD/Crud';
 // import Productinput from './10.Input/Productinput';
 
 
@@ -86,7 +89,7 @@ function App() {
       {/* <Productinput/> */}
       {/* <Userefinput/> */}
       {/* ===========Delete===== */}
-      <DeleteCom/>
+      {/* <DeleteCom/> */}
       {/* ==========TASK======= */}
       {/* <div className='d-flex justify-content-evenly' >
       <CardPart />
@@ -103,6 +106,10 @@ function App() {
       {/* ****************END Project3*************** */}
       {/* ==========TASK  END======= */}
       {/* <Offcanvas/> */}
+
+      {/* <Crud/> */}
+      {/* <CrudCom/> */}
+      <ComCrud/>
     </div>
   );
 }
