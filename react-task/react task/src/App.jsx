@@ -1,14 +1,23 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
+import Colorpiker from './13.Multiple Input Crud/Colorpiker';
+// import Searchcom from './13.Multiple Input Crud/Searchcom';
+// import InputCrud from './task/MultipleInput/InputCrud';
+// import RadioInput from './task/Multiple Input Crud/RadioInput';
+// import CheckedInput from './task/Multiple Input Crud/CheckedInput';
 // import CrudCom from './task/CRUD/CrudCom';
-import ComCrud from './task/CRUD/ComCrud';
+// import SelectCom from './task/Multiple Input Crud/SelectCom';
+// import CrudCom from './task/CRUD/CrudCom';
+// import ComCrud from './task/CRUD/ComCrud';
 // import Userefinput from './10.Input/Userefinput';
 // import Offcanvas from './Offcanvas/Offcanvas';
 // import UseEffect from './9.Hooks/UseEffect';
 // import InputCom from './10.Input/InputCom';
 // import DeleteCom from './11.Delete/DeleteCom';
 // import Crud from './task/CRUD/Crud';
+// import InputCom from './task/Multiple Input Crud/InputCom';
+// import Rangeinput from './task/Multiple Input Crud/Rangeinput';
 // import Productinput from './10.Input/Productinput';
 
 
@@ -90,7 +99,10 @@ function App() {
       {/* <Userefinput/> */}
       {/* ===========Delete===== */}
       {/* <DeleteCom/> */}
+      
+
       {/* ==========TASK======= */}
+
       {/* <div className='d-flex justify-content-evenly' >
       <CardPart />
       <CardPart />
@@ -101,15 +113,35 @@ function App() {
       {/* <Cardprops/> */}
       {/* <MapandKeys/> */}
       {/* <Home/> */}
+
+
       {/* ****************Project3*************** */}
       {/* <Counter/> */}
       {/* ****************END Project3*************** */}
-      {/* ==========TASK  END======= */}
-      {/* <Offcanvas/> */}
 
+      
+
+      {/* ------------Multiple Input -----------*/}
+      {/* <InputCrud/> */}
+      {/* ------------Multiple Input -----------*/}
+
+      
+      {/* ==========TASK  END======= */}
+
+
+      {/* <Offcanvas/> */}
       {/* <Crud/> */}
       {/* <CrudCom/> */}
-      <ComCrud/>
+      {/* <ComCrud/> */}
+
+      {/* ----------Multiple Input  */}
+      {/* <InputCom/> */}
+      {/* <RadioInput/> */}
+      {/* <CheckedInput/> */}
+      {/* <SelectCom/> */}
+      {/* <Rangeinput/> */}
+      <Colorpiker/>
+      {/* <Searchcom /> */}
     </div>
   );
 }

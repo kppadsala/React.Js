@@ -36,7 +36,7 @@ export default function Crud() {
     }
   };
 
-  // Hande a Delete Data
+  Hande a Delete Data
   const deleteData = (index) => {
     // console.log("deleteData----->", index);
     let filterData = dataArr.filter((e, i) => i !== index);
@@ -44,7 +44,7 @@ export default function Crud() {
     setData(""); // Clear the input field
   };
 
-  // Upadate Handle =>click on Edit button
+  Upadate Handle =>click on Edit button
   const updateHandle = (data, index) => {
     // console.log("updateHandle  data:", data);
     // console.log("updateHandle  index:", index);
@@ -107,8 +107,7 @@ export default function Crud() {
               <span className="d-flex gap-3 justify-content text ">
                 {i + 1}
               </span>
-              {e}
-              <span>
+              {e} <span>
                 <h3>
                   <FaEdit className="me-4" onClick={() => updateHandle(e, i)} />
                   <RiDeleteBin6Line onClick={() => deleteData(i)} />

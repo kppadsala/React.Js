@@ -14,7 +14,7 @@ export default function ComCrud() {
 
   const addData = () => {
     if (bird !== "") {
-      if (!birdArr.includes(bird)) {
+      if (!setbirdArr.includes(bird)) {
         setbirdArr([...birdArr, bird]);
         setbird("");
       } else {
@@ -64,7 +64,7 @@ export default function ComCrud() {
           }}
         ></Input>
         {index || index == 0 ? (
-          <Button onClick={() => upData()}>Update</Button>
+          <Button onClick={() => upData()} className="bg-danger border-0">Update</Button>
         ) : (
           <Button
             className="bg-danger border-0 ps-3 pe-3"
