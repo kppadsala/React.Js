@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
-import Colorpiker from './13.Multiple Input Crud/Colorpiker';
+
+import Router from './task/RouterCom/Service/Router';
+// import Colorpiker from './13.Multiple Input Crud/Colorpiker';
 // import Searchcom from './13.Multiple Input Crud/Searchcom';
 // import InputCrud from './task/MultipleInput/InputCrud';
 // import RadioInput from './task/Multiple Input Crud/RadioInput';
@@ -53,7 +55,7 @@ import Colorpiker from './13.Multiple Input Crud/Colorpiker';
 // import Cardprops from './task/project1/cardprops'
 // import ClassProps from './4.props/Class/ClassProps'
 // import FunctionProps from './4.props/Function/FunctionProps'
-
+// import Router from './14.Router/Src/Router';
 
 
 function App() {
@@ -94,13 +96,15 @@ function App() {
       {/* =========HOOKS============ */}
       {/* <UseEffect/> */}
       {/* =========END HOOKS============ */}
+
       {/* <InputCom /> */}
       {/* <Productinput/> */}
       {/* <Userefinput/> */}
       {/* ===========Delete===== */}
       {/* <DeleteCom/> */}
-      
 
+      {/* ------------------14.Router----------- */}
+      {/* <Router /> */}
       {/* ==========TASK======= */}
 
       {/* <div className='d-flex justify-content-evenly' >
@@ -114,20 +118,18 @@ function App() {
       {/* <MapandKeys/> */}
       {/* <Home/> */}
 
-
       {/* ****************Project3*************** */}
       {/* <Counter/> */}
       {/* ****************END Project3*************** */}
 
-      
-
       {/* ------------Multiple Input -----------*/}
       {/* <InputCrud/> */}
       {/* ------------Multiple Input -----------*/}
+      {/* ----------Router------------- */}
+      <Router/>
+      {/* ----------Router------------- */}
 
-      
       {/* ==========TASK  END======= */}
-
 
       {/* <Offcanvas/> */}
       {/* <Crud/> */}
@@ -140,7 +142,7 @@ function App() {
       {/* <CheckedInput/> */}
       {/* <SelectCom/> */}
       {/* <Rangeinput/> */}
-      <Colorpiker/>
+      {/* <Colorpiker/> */}
       {/* <Searchcom /> */}
     </div>
   );

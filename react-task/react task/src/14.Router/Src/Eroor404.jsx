@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Body() {
+export default function Eroor404() {
   return (
     <div>
-      <h1>Body</h1>
+      <h1>Eroor404</h1>
     </div>
   );
 }
