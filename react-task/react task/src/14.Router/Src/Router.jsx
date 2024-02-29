@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "./Footer";
 import Home from "./Home";
 import Body from "./Body";
-import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
+import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import Eroor404 from "./Eroor404";
 import "./index.css";
 export default function Router() {

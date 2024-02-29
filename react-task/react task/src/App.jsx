@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
+import Router from './14.Router/Src/Router';
 
-import Router from './task/RouterCom/Service/Router';
+// import Router from './task/RouterCom/Service/Router';
 // import Colorpiker from './13.Multiple Input Crud/Colorpiker';
 // import Searchcom from './13.Multiple Input Crud/Searchcom';
 // import InputCrud from './task/MultipleInput/InputCrud';
@@ -104,7 +105,9 @@ function App() {
       {/* <DeleteCom/> */}
 
       {/* ------------------14.Router----------- */}
-      {/* <Router /> */}
+      <Router />
+
+    
       {/* ==========TASK======= */}
 
       {/* <div className='d-flex justify-content-evenly' >
@@ -126,7 +129,7 @@ function App() {
       {/* <InputCrud/> */}
       {/* ------------Multiple Input -----------*/}
       {/* ----------Router------------- */}
-      <Router/>
+      {/* <Router/> */}
       {/* ----------Router------------- */}
 
       {/* ==========TASK  END======= */}
