@@ -5,7 +5,8 @@ import "./App.css";
 // import Router from "./Assingment/WebDesign/Router";
 // import WebHome from "./Assingment/WebDesign/WebHome";
 // import ProtectRouter from "./task/ProjectRouter/ProtectRouter";
-import SearchFilter from "./Project Task/Search Filter/SearchFilter";
+// import SearchFilter from "./Project Task/Search Filter/SearchFilter";
+import CrudOperation from "./Project Task/Search Filter/CrudOperation";
 // import Router from "./task/RouterSir/Router";
 
 // import Router from "./task/ProtectedRouter Project/Router";
@@ -188,9 +189,9 @@ function App() {
 {/* -----------Assingment------------ */}
       {/* <WebHome/> */}
 
-      {/* ================Project Task===============*/}
-      <SearchFilter/>
-
+{/* ================Project Task===============*/}
+{/* <SearchFilter/> */}
+<CrudOperation/>
     </div>
   );
 }
