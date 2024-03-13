@@ -99,7 +99,7 @@ export default function Searchcom() {
               <span className="d-flex gap-3 justify-content-center text ">
                 {i + 1}
               </span>
-              {e}{" "}
+              {e}
             </li>
           );
         })}
