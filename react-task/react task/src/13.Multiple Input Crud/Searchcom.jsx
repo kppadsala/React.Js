@@ -34,7 +34,7 @@ export default function Searchcom() {
         alert("YOUR ENTER DATA IS SIMILAR PLEASE CHANGE");
       }
     } else {
-      alert("**PLEASE ENTER DATA**");
+      alert("**PLEASE ENTER DATA**"); 
     }
   };
 

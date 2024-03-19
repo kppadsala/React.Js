@@ -44,7 +44,6 @@ export default function CrudCom() {
     // console.log("deleteHandle--->", index)
     let filterData = carArr.filter((e, i) => i !== index);
     setcarArr(filterData);
-    setCar("");
     };
     
     // updateHandle 'on click
