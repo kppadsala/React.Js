@@ -65,6 +65,7 @@ export default function DeleteCom() {
               borderRadius: "5px 0px 0px 5px",
             }}
           ></Input>
+          
           <Button
             className="bg-danger border-0"
             style={{
