@@ -18,8 +18,28 @@ export default function CrudOperation() {
   // console.log("--->", donechecked);
   // ============For Edit Data==============
   let [editData, setEditData] = useState(null);
+  let [allSelect,setAllSelect]=useState([])
+console.log("===>allselect",allSelect);
+console.log("===>setAllSelect",setAllSelect);
 
- 
+  // const selectAllHandler = (ele) => {
+  //   const handleChange = (e) => {
+  //     const { name, checked } = e.target;
+  //     if (name === "allSelect") {
+  //       let tempUser = users.map((user) => {
+  //         return { ...user, isChecked: checked };
+  //       });
+  //       setUsers(tempUser);
+  //     } else {
+  //       let tempUser = users.map((user) =>
+  //         user.name === name ? { ...user, isChecked: checked } : user
+  //       );
+  //       setUsers(tempUser);
+  //     }
+  //   };
+  // }
+   
+  
 
   //========Use Effect ===========
   useEffect(() => {
@@ -229,7 +249,8 @@ export default function CrudOperation() {
         <div className="border border-bottom-1  border-black px-3 py-2 w-50 ">
           <h4 className="px-3 text-center">Not Verified Data</h4>
           <Input type="checkbox" className="me-3 border border-black "
-         
+        //  checked={dataArr.length === allSelect.length}
+        //  onChange={(e) => selectAllHandler("pending", e?.target?.checked)}
           />
           <Label check>Select All</Label>
 
@@ -265,7 +286,7 @@ export default function CrudOperation() {
           </Button>
           <Button
             className="bg-danger w-100 border-0 mt-4 fw-bold text-uppercase "
-            onClick={(e) => allSelectData(e)}
+            // onClick={(e) => selectAllHandler(e)}
           >
             Move Data
           </Button>
