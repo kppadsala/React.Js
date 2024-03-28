@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FaPlus } from "react-icons/fa";
+import { FaPlus, FaSearch } from "react-icons/fa";
 import { Button, Input, Label } from "reactstrap";
 import { AiTwotoneDelete } from "react-icons/ai";
 import { MdVerified } from "react-icons/md";
@@ -12,65 +12,34 @@ export default function CrudOperation() {
   // ======For Store Data in Array============
   let [dataArr, setDataArr] = useState([]);
   // =======For Verifie Button==============
-  let [Verifie, setVerifie] = useState([]);
-  // =======For CheckBox Button==============
+  let [verifie, setVerifie] = useState([]);
+  // =======For DataArr CheckBox Button==============
   let [donechecked, setDonechecked] = useState([]);
-  // console.log("--->", donechecked);
+  // =======For verifie CheckBox Button==============
+  let [verifiechecked, setVerifiechecked] = useState([]);
   // ============For Edit Data==============
   let [editData, setEditData] = useState(null);
-  let [allSelect,setAllSelect]=useState([])
-console.log("===>allselect",allSelect);
-console.log("===>setAllSelect",setAllSelect);
-
-  // const selectAllHandler = (ele) => {
-  //   const handleChange = (e) => {
-  //     const { name, checked } = e.target;
-  //     if (name === "allSelect") {
-  //       let tempUser = users.map((user) => {
-  //         return { ...user, isChecked: checked };
-  //       });
-  //       setUsers(tempUser);
-  //     } else {
-  //       let tempUser = users.map((user) =>
-  //         user.name === name ? { ...user, isChecked: checked } : user
-  //       );
-  //       setUsers(tempUser);
-  //     }
-  //   };
-  // }
-   
-  
+  let [search,setsearch]=useState("");
 
   //========Use Effect ===========
   useEffect(() => {
-    const storedDataArr = JSON.parse(localStorage.getItem("dataArr"));
-    if (storedDataArr) {
-      setDataArr(storedDataArr);
-    }
-  }, []);
+    let jsonData=localStorage.getItem("dataArr") || "[]";
+    let normalData=JSON.parse(jsonData);
+    let data=normalData.filter((e)=> e.includes(search));
+    setDataArr(data); 
 
-  // =========Get Data On Input ============
+    let verifiejsonData=localStorage.getItem("verifieArr") || "[]";
+    let verifienormalData=JSON.parse(verifiejsonData);
+    let verifiedata=verifienormalData.filter((e)=> e.includes(search));
+    setVerifie(verifiedata); 
+}, [search]);
+
+// =========Get Data On Input ============
   const getData = (ele) => {
     setData(ele.target.value);
   };
-  // =============Move data From  Verifie Data  to Not Verifie Data on Verifie Button========
-  const VerifieHandle = (index) => {
-    let verifiedData = dataArr[index];
-    let filterData = dataArr.filter((e, i) => i !== index);
-    setDataArr(filterData);
-    setVerifie([...Verifie, verifiedData]);
-  };
-
-  // =============reaturn data on Verifie Data in Verifie Button========
-  const ReturnHandle = (index) => {
-    let ReturnData = Verifie[index];
-    let ReturnfilterData = Verifie.filter((e, i) => i !== index);
-    setVerifie(ReturnfilterData);
-    setDataArr([...dataArr, ReturnData]);
-  };
-
-  // ============== Add Data in Not verifie Data================
-  const addData = () => {
+   // ============== Add Data in Not verifie Data================
+   const addData = () => {
     if (data !== "") {
       if (!dataArr.includes(data)) {
         setDataArr([...dataArr, data]);
@@ -84,31 +53,49 @@ console.log("===>setAllSelect",setAllSelect);
       alert("Please fill some data");
     }
   };
-
-  //================Delete Data in Verifie Data================
-
-  const deleteHandle = (index) => {
-    swal({
-      title: "Are you sure?",
-      text: "Your Select Data has been Deleted?",
-      icon: "warning",
-      buttons: true,
-      dangerMode: true,
-    }).then((willDelete) => {
-      if (willDelete) {
-        let filterData = dataArr.filter((e, i) => i !== index);
-        setDataArr(filterData);
-        swal("Poof! Your Data has been Deleted!", {
-          icon: "success",
-        });
-      } else {
-        swal({
-          icon: "info",
-          text: "Your Data is safe!",
-        });
-      }
-    });
+  // =============Move data From  Verifie Data  to Not Verifie Data on Verifie Button========
+  const VerifieHandle = (index) => {
+    let verifiedData = dataArr[index];
+    setVerifie([...verifie, verifiedData]);
+    localStorage.setItem("verifieArr",JSON.stringify([...verifie, verifiedData]));
+    let filterData = dataArr.filter((e, i) => i !== index);
+    setDataArr(filterData);
   };
+
+  // =============reaturn data on Verifie Data in Verifie Button========
+  const ReturnHandle = (index) => {
+    let ReturnData = verifie[index];
+    let ReturnfilterData = verifie.filter((e, i) => i !== index);
+    setVerifie(ReturnfilterData);
+    setDataArr([...dataArr, ReturnData]);
+  };
+
+ 
+
+  //================Delete Data in DataArr Data================
+
+  // const deleteHandle = (index) => {
+  //   swal({
+  //     title: "Are you sure?",
+  //     text: "Your Select Data has been Deleted?",
+  //     icon: "warning",
+  //     buttons: true,
+  //     dangerMode: true,
+  //   }).then((willDelete) => {
+  //     if (willDelete) {
+  //       let filterData = dataArr.filter((e, i) => i !== index);
+  //       setDataArr(filterData);
+  //       swal("Poof! Your Data has been Deleted!", {
+  //         icon: "success",
+  //       });
+  //     } else {
+  //       swal({
+  //         icon: "info",
+  //         text: "Your Data is safe!",
+  //       });
+  //     }
+  //   });
+  // };
 
   //================Remove Data in Verifie Data================
 
@@ -126,7 +113,7 @@ console.log("===>setAllSelect",setAllSelect);
       dangerMode: true,
     }).then((willDelete) => {
       if (willDelete) {
-        let filterData = Verifie.filter((e, i) => i !== index);
+        let filterData = verifie.filter((e, i) => i !== index);
         setVerifie(filterData);
         swal("Poof! Your Data has been Deleted!", {
           icon: "success",
@@ -151,41 +138,48 @@ console.log("===>setAllSelect",setAllSelect);
   };
 
   // ===============Submit Button Handler For checkBox in Not Verfied Data====================
-
-  const submitHandler = () => {
+ const submitHandler = () => {
     let panddingChecked = dataArr.filter((e, i) => {
       return donechecked.includes(i);
     });
-    // console.log(panddingChecked);
-
-    Verifie = [...donechecked, panddingChecked];
+    // console.log("panddingChecked",panddingChecked);
+    let newverifie = [...verifie, ...panddingChecked];
+    // console.log("newverifie",newverifie);
     let notCheckedData = dataArr.filter((e, i) => {
       return !donechecked.includes(i);
     });
-    // console.log("----restpandding-->",notCheckedData);
 
-    setVerifie(panddingChecked);
+    setVerifie(newverifie);
     setDataArr(notCheckedData);
     setDonechecked([]);
+  };
+  const verifiecheckboxHandle = (index, e) => {
+    if (e.target.checked) {
+      setVerifiechecked([...verifiechecked, index]);
+    } else {
+      let filterData = verifiechecked.filter((i) => i !== index);
+      setVerifiechecked(filterData);
+    }
   };
 
   // ===============Submit Button Handler For checkBox in Verfied Data====================
   const submitHandlerVerifie = () => {
-    let panddingChecked = Verifie.filter((e, i) => {
-      return donechecked.includes(i);
+    let panddingCheckedVerifie =verifie.filter((e, i) => {
+      return verifiechecked.includes(i);
     });
-    // console.log(panddingChecked);
+    // console.log("panddingCheckedVerifie",panddingCheckedVerifie);
 
-    dataArr = [...donechecked, panddingChecked];
-    let notCheckedData = Verifie.filter((e, i) => {
-      return !donechecked.includes(i);
+    let newDataArr = [...dataArr,...panddingCheckedVerifie];
+    // console.log("newDataArr",newDataArr);
+    let notCheckedDataVerifie = verifie.filter((e, i) => {
+      return !verifiechecked.includes(i);
     });
-    // console.log("----restpandding-->",notCheckedData);
+    // console.log("==>dataArr",dataArr);
 
-    setDataArr(panddingChecked);
-    setVerifie(notCheckedData);
+    setDataArr(newDataArr);
+    setVerifie(notCheckedDataVerifie);
+    setVerifiechecked([]);
 
-    setDonechecked([]);
   };
 
   // ===========For Update Data =================
@@ -210,6 +204,79 @@ console.log("===>setAllSelect",setAllSelect);
       updatedata();
     }
   };
+
+  // =======================SelectAll For DataArr To Verifie==================
+  const dataArrSelectAll = (e) => {
+    if (e?.target?.checked) {
+      let allSelectedData = dataArr.map((e, i) => i);
+      // console.log("allSelectedData", allSelectedData);
+
+      setDonechecked(allSelectedData);
+    } else {
+      setDonechecked([]);
+    }
+  };
+
+  // =======================SelectAll For Verifie To DataArr================== 
+  const verifieArrSelectAll = (e) => {
+    if (e?.target?.checked) {
+      let allVerifieSelected = verifie.map((e, i) => i);
+      // console.log("allVerifieSelected", allVerifieSelected);
+      setVerifiechecked(allVerifieSelected);
+    } else {
+      setVerifiechecked([]);
+    }
+  };
+
+  // ===========================DataArr All Data Delete On Button====================
+  // const dataArrDeleteAll = () => {
+  //   swal({
+  //     title: "Are you sure?",
+  //     text: "Your Select Data has been Deleted?",
+  //     icon: "warning",
+  //     buttons: true,
+  //     dangerMode: true,
+  //   }).then((willDelete) => {
+  //     if (willDelete) {
+  //      setDataArr([])
+  //       swal("Poof! Your Data has been Deleted!", {
+  //         icon: "success",
+  //       });
+  //     } else {  
+  //       swal({
+  //         icon: "info",
+  //         text: "Your Data is safe!",
+  //       });
+  //     }
+  //   });
+  // };
+  // ===========================Verifie All Data Delete On Button====================
+const verifieDeleteAll = () => {
+  swal({
+    title: "Are you sure?",
+    text: "Your Select Data has been Deleted?",
+    icon: "warning",
+    buttons: true,
+    dangerMode: true,
+  }).then((willDelete) => {
+    if (willDelete) {
+      setVerifie([]);
+      swal("Poof! Your Data has been Deleted!", {
+        icon: "success",
+      });
+    } else {  
+      swal({
+        icon: "info",
+        text: "Your Data is safe!",
+      });
+    }
+  });
+};
+
+const searchVerifieData=(e)=>{
+  setsearch(e.target.value)
+}
+
 
   return (
     <div className="d-flex justify-content-center align-items-center flex-column ">
@@ -248,11 +315,33 @@ console.log("===>setAllSelect",setAllSelect);
       <div className="d-flex justify-content-center  gap-4 mt-4 w-100 px-5">
         <div className="border border-bottom-1  border-black px-3 py-2 w-50 ">
           <h4 className="px-3 text-center">Not Verified Data</h4>
-          <Input type="checkbox" className="me-3 border border-black "
-        //  checked={dataArr.length === allSelect.length}
-        //  onChange={(e) => selectAllHandler("pending", e?.target?.checked)}
+
+          <div className="d-flex justify-content-center w-100 align-items-center ">
+          <Input className="my-4 border border-1 border-black text-center w-75  "
+           style={{
+            borderRadius: "5px 0px 0px 5px",
+            border: "2px solid black",
+          }}
+          placeholder="----Search Your Data----"
+          onChange={(e)=>setsearch(e.target.value)}
+          onKeyPress={handleEnter}/>
+          <span className="bg-danger p-2 px-3 align-items-center d-flex" style={{
+            borderRadius: "0px 5px 5px 0px",
+            border: "0px solid black",
+            height:"37px"
+          }}>
+          <FaSearch className="text-white"/>
+          </span>
+          </div>
+
+          <Input
+            type="checkbox"
+            className="me-3 border border-black "
+            checked={dataArr.length && dataArr.length === donechecked.length}
+            onChange={(e) => dataArrSelectAll(e)}
           />
           <Label check>Select All</Label>
+         
 
           <hr />
 
@@ -269,10 +358,11 @@ console.log("===>setAllSelect",setAllSelect);
                   onChange={(e) => checkboxHandle(i, e)} // Use onChange instead of onClick
                 />
                 <span>{i + 1}</span>
-                {e}
+                <span className="w-100 text-center ">{e}</span>
+
                 <span className="d-flex justify-content-center gap-3 ">
                   <LiaUserEditSolid onClick={() => updateHandle(e, i)} />
-                  <MdVerified onClick={() => VerifieHandle(i)} />
+                  <MdVerified onClick={() => VerifieHandle(i)} className="text-success align-items-end "/>
                   {/* <AiTwotoneDelete onClick={() => deleteHandle(i)} /> */}
                 </span>
               </div>
@@ -282,38 +372,61 @@ console.log("===>setAllSelect",setAllSelect);
             className="bg-danger w-100 border-0 mt-4 fw-bold text-uppercase "
             onClick={(e) => submitHandler(e)}
           >
-            Submit
+            SUBMIT
           </Button>
           <Button
             className="bg-danger w-100 border-0 mt-4 fw-bold text-uppercase "
-            // onClick={(e) => selectAllHandler(e)}
+            onClick={() => submitHandler ()}
           >
-            Move Data
+            MOVE TO ALL DATA
           </Button>
         </div>
         <div className="border border-1  border-black px-3 py-2 w-50">
-        <h4 className="px-3 text-center"> Verified Data</h4>
-          <Input type="checkbox" className="me-3  border border-black"/>
+          <h4 className="px-3 text-center"> Verified Data</h4>
+          
+          <div className="d-flex justify-content-center w-100 align-items-center ">
+          <Input className="my-4 border border-1 border-black text-center w-75  "
+           style={{
+            borderRadius: "5px 0px 0px 5px",
+            border: "2px solid black",
+          }}
+          placeholder="----Search Your Data----"
+          onClick={(e)=>searchVerifieData(e)}/>
+          <span className="bg-danger p-2 px-3 align-items-center d-flex" style={{
+            borderRadius: "0px 5px 5px 0px",
+            border: "0px solid black",
+            height:"37px"
+          }}>
+          <FaSearch className="text-white" />
+          </span>
+          </div>
+
+          <Input
+            type="checkbox"
+            className="me-3  border border-black"
+            checked={verifie.length && verifie.length === verifiechecked.length}
+            onChange={(e) => verifieArrSelectAll(e)}
+          />
           <Label check>Select All</Label>
 
           <hr />
 
-          {Verifie.map((e, i) => {
+          {verifie.map((e, i) => {
             return (
               <li
                 key={i}
-                className="list-unstyled d-flex justify-content-around align-items-center gap-3"
+                className="list-unstyled d-flex justify-content-around align-items-center gap-3 h5"
               >
                 <input
                   type="checkbox"
                   className="me-3"
-                  checked={donechecked.includes(i)} // Check if the index is included in donechecked
-                  onChange={(e) => checkboxHandle(i, e)} // Use onChange instead of onClick
+                  checked={verifiechecked.includes(i)} // Check if the index is included in donechecked
+                  onChange={(e) => verifiecheckboxHandle  (i, e)} // Use onChange instead of onClick
                 />
                 <span>{i + 1}</span>
-                {e}
+                <span className="w-100 text-center ">{e}</span>
                 <span className="d-flex justify-content-center gap-3 ">
-                  <MdVerified onClick={() => ReturnHandle(i)} />
+                  <MdVerified onClick={() => ReturnHandle(i)} className="text-success"/>
                   <AiTwotoneDelete onClick={() => verifiedeleteHandle(i)} />
                 </span>
               </li>
@@ -323,9 +436,14 @@ console.log("===>setAllSelect",setAllSelect);
             className="bg-danger w-100 border-0 mt-4 fw-bold text-uppercase "
             onClick={(e) => submitHandlerVerifie(e)}
           >
-            Submit
+            SUBMIT
           </Button>
-         
+          <Button
+            className="bg-danger w-100 border-0 mt-4 fw-bold text-uppercase "
+            onClick={() => verifieDeleteAll()}
+          >
+            DELETE ALL DATA
+          </Button>
         </div>
       </div>
     </div>

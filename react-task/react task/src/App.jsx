@@ -1,5 +1,6 @@
-import { useState } from "react";
+// import { useState } from "react";
 import "./App.css";
+// import ToDoList from "./Project Task/Search Filter/ToDoList";
 // import UseContaxtCom from "./9.Hooks/Use Contaxt/UseContaxtCom";
 
 
@@ -7,7 +8,9 @@ import "./App.css";
 // import WebHome from "./Assingment/WebDesign/WebHome";
 // import ProtectRouter from "./task/ProjectRouter/ProtectRouter";
 // import SearchFilter from "./Project Task/Search Filter/SearchFilter";
-import CrudOperation from "./Project Task/Search Filter/CrudOperation";
+import CrudOperation from "./Project Task/Search Filter/CrudOperation";  
+// import InputCom1 from "./Project Task/Search Filter/InputCom1";
+// import TodoProject from "./Project Task/Search Filter/TodoProject.JSX";
 // import Router from "./task/RouterSir/Router";
 
 // import Router from "./task/ProtectedRouter Project/Router";
@@ -139,17 +142,7 @@ function App() {
       {/* <SelectCom/> */}
       {/* <Rangeinput/> */}
       {/* <Colorpiker/> */}
-      {/* <Searchcom /> */}
-
-
-
-
-
-
-
-
-
-
+      {/* <Searchcom />/ */}
 
 
 
@@ -194,6 +187,9 @@ function App() {
 {/* ================Project Task===============*/}
 {/* <SearchFilter/> */}
 <CrudOperation/>
+{/* <ToDoList/> */}
+{/* <InputCom1/> */}
+
     </div>
   );
 }
